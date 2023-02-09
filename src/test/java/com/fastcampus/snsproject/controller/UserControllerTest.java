@@ -123,7 +123,7 @@ public class UserControllerTest {
 
     @Test
     @WithAnonymousUser
-    void 알람리스크요청시_로그인하지_않은경우() throws Exception {
+    void 알람리스트요청시_로그인하지_않은경우() throws Exception {
         when(userService.alarmList(any(), any())).thenReturn(Page.empty());
         mockMvc.perform(get("/api/v1/users/alarm")
                         .contentType(MediaType.APPLICATION_JSON))
